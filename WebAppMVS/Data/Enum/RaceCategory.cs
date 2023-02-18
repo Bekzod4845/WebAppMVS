@@ -2,9 +2,9 @@ namespace WebAppMVS.Data.Enum;
 
 public enum RaceCategory
 {
-    Marthon,
+    Marathon,
     Ultra,
     FiveK,
     TenK,
-    HalfMarthon
+    HalfMarathon
 }
