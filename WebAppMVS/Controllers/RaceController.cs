@@ -5,29 +5,49 @@ using System.Threading.Tasks;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.EntityFrameworkCore;
 using WebAppMVS.Data;
+using WebAppMVS.Interfaces;
 using WebAppMVS.Models;
 
 namespace WebAppMVS.Controllers
 {
     public class RaceController : Controller
     {
-        private readonly ApplicationDbContext _context;
+        private readonly IRaceRepository _raceRepository;
 
-        public RaceController(ApplicationDbContext context)
+        public RaceController(IRaceRepository raceRepository)
         {
-            _context = context;
+            _raceRepository = raceRepository;
         }
-        public IActionResult Index()
+        public async Task<IActionResult> Index()
         {
-            List<Race> races = _context.Races.ToList();
+            IEnumerable<Race> races = await _raceRepository.GetAll();
             return View(races);
         }
         
-        public IActionResult Detail(int id)
+        public async Task<IActionResult> Detail(int id)
         {
-            Race race = _context.Races.Include(a => a.Address).FirstOrDefault(c => c.Id == id);
+            Race race = await _raceRepository.GetByIdAsync(id);
             // ReSharper disable once Mvc.ViewNotResolved
             return View(race);
+        }
+        
+        public IActionResult Create()
+        {
+            // ReSharper disable once Mvc.ViewNotResolved
+            return View();
+        }
+
+        [HttpPost]
+        public async Task<IActionResult> Create(Race race)
+        {
+            if (ModelState.IsValid)
+            {
+                return  View(race);
+            }
+
+            _raceRepository.Add(race);
+
+            return RedirectToAction("Index");
         }
     }
 }

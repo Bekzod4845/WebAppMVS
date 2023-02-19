@@ -15,6 +15,10 @@ build_property.GenerateRazorMetadataSourceChecksumAttributes =
 build_property.MSBuildProjectDirectory = /Users/qoraxonovbekzod/Desktop/WebAppMVS/WebAppMVS
 build_property._RazorSourceGeneratorDebug = 
 
+[/Users/qoraxonovbekzod/Desktop/WebAppMVS/WebAppMVS/Views/Club/Create.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3MvQ2x1Yi9DcmVhdGUuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
 [/Users/qoraxonovbekzod/Desktop/WebAppMVS/WebAppMVS/Views/Club/Detail.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3MvQ2x1Yi9EZXRhaWwuY3NodG1s
 build_metadata.AdditionalFiles.CssScope = 
@@ -29,6 +33,10 @@ build_metadata.AdditionalFiles.CssScope =
 
 [/Users/qoraxonovbekzod/Desktop/WebAppMVS/WebAppMVS/Views/Home/Privacy.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3MvSG9tZS9Qcml2YWN5LmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[/Users/qoraxonovbekzod/Desktop/WebAppMVS/WebAppMVS/Views/Race/Create.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3MvUmFjZS9DcmVhdGUuY3NodG1s
 build_metadata.AdditionalFiles.CssScope = 
 
 [/Users/qoraxonovbekzod/Desktop/WebAppMVS/WebAppMVS/Views/Race/Detail.cshtml]
